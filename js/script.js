@@ -12,6 +12,7 @@ const { createApp } = Vue
         title: "Piccoli test di Vue Js",
         titleClass: "",
         students: ["Luca", "Gabriel", "Anna", "Marco"],
+        //imageUrl: "img/gabrielCyberPunk.png" ,
         imageUrl: "" ,
 
       }
@@ -22,12 +23,23 @@ const { createApp } = Vue
 
         changeTitle: function() {
 
-            this.title = this.name;
+            if (this.name && this.lastName) {
+
+                this.title = "Cambiato da " + this.name + " " + this.lastName;
+
+              } else {
+
+                alert("Inserisci Nome e Cognome");
+
+            }
+
+        },
+
+        showImg: function() {
+
+            this.imageUrl = "img/gabrielCyberPunk.png";
         }
         
     }
-
-    // Stampare a schermo un messaggio all’interno di un h1, utilizzando i data.
-
 
   }).mount('#app')
