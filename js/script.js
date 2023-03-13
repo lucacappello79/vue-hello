@@ -6,11 +6,13 @@ const { createApp } = Vue
 
       return {
 
-        message: "Hello Vue!",
-        nome: "Sandro",
-        cognome: "Cappello",
-        titolo: "Titolo",
-        studenti: ["Luca", "Gabriel", "Anna", "Marco"]
+        message: "Hello Luca!",
+        name: "",
+        lastName: "Cappello",
+        title: "Piccoli test di Vue Js",
+        titleClass: "colors",
+        students: ["Luca", "Gabriel", "Anna", "Marco"],
+        imageUrl: "" ,
 
       }
 

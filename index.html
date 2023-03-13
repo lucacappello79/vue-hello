@@ -19,18 +19,29 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <div id="app">
-    {{ message }}
+    <div class="container" v-bind:class="titleClass">
 
-    <h1>Ciao {{ studenti[2] }}</h1>
-    
+        <h1 v-bind:class="titleClass">{{ title }}</h1>
+        <h3> Benvenuta {{ students[2] }}</h3>
+        
 
-    <input type="text" v-model="nome" placeholder="Inserisci il tuo nome">
-    <br>
-    <br>
-    <p>Il tuo nome è {{nome}}</p>
-    <br>
-    <br>
-    <button @click="changeMessage">Cambia messaggio</button>
+        <input type="text" v-model="name" placeholder="quel che scrivo qui andrà a cmabiare il valore della mia chiave in data">
+        <br>
+        <p>Per applicare la classe "colori", scrivi "colori" all'interno dell' input</p>
+        <input type="text" v-model="titleClass" placeholder="colori">
+        <br>
+        <br>
+        <p>Il tuo nome è {{ name }}</p>
+        <br>
+        <br>
+        <p>{{ message }}</p>
+        <br>
+        <br>
+        <div class="img-wrapper">
+            <img v-bind:src=" imageUrl">
+        </div>
+        <button @click="changeMessage">Cambia messaggio</button>
+    </div>
 
 
 
