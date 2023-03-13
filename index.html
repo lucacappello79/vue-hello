@@ -21,26 +21,37 @@
 <div id="app">
     <div class="container" v-bind:class="titleClass">
 
-        <h1 v-bind:class="titleClass">{{ title }}</h1>
-        <h3> Benvenuta {{ students[2] }}</h3>
+        <h1 v-bind:class="titleClass" @click="changeTitle">{{ title }}</h1>
+
+        <!-- test
+        <h3> Benvenuta {{ students[2] }}</h3> -->
         
 
-        <input type="text" v-model="name" placeholder="quel che scrivo qui andrà a cmabiare il valore della mia chiave in data">
+        <input type="text" v-model="name" placeholder="Insert Name">
         <br>
-        <p>Per applicare la classe "colori", scrivi "colori" all'interno dell' input</p>
-        <input type="text" v-model="titleClass" placeholder="colori">
+        <input type="text" v-model="lastName" placeholder="Insert  Last Name">
         <br>
-        <br>
-        <p>Il tuo nome è {{ name }}</p>
-        <br>
-        <br>
-        <p>{{ message }}</p>
+
+
+        <p>Per applicare lo stile, scrivi "colored" oppure "dark" all'interno dell' input</p>
+        <input type="text" v-model="titleClass" placeholder="scegli dark o colored">
         <br>
         <br>
+
+        <p>Hello {{ name }} {{ lastName }}!</p>
+        <br>
+        <br>
+        <hr>
+
+        <button @click="changeTitle">Cambia il titolo</button>
+        <br>
+
         <div class="img-wrapper">
             <img v-bind:src=" imageUrl">
         </div>
-        <button @click="changeMessage">Cambia messaggio</button>
+
+
+        
     </div>
 
 
