@@ -26,7 +26,7 @@
         <!-- test
         <h3> Benvenuta {{ students[2] }}</h3> -->
         
-        
+
         <input type="text" v-model="name" placeholder="Insert Name">
         <br>
         <input type="text" v-model="lastName" placeholder="Insert  Last Name">
@@ -51,11 +51,13 @@
         <button @click="changeTitle">Cambia il titolo</button>
         <br>
         <br>
-        <button @click="showImg">Mostra immagine</button>
+        <button @click="showImg">{{ imgButton }}</button>
         <br>
 
-        <div class="img-wrapper">
+        <div class="img-wrapper" v-show="imgVisible">
+
             <img v-bind:src=" imageUrl">
+            
         </div>
 
 
