@@ -26,18 +26,23 @@
         <!-- test
         <h3> Benvenuta {{ students[2] }}</h3> -->
         
-
+        
         <input type="text" v-model="name" placeholder="Insert Name">
         <br>
         <input type="text" v-model="lastName" placeholder="Insert  Last Name">
         <br>
-
 
         <p>Per applicare lo stile, scrivi "colored" oppure "dark" all'interno dell' input</p>
         <input type="text" v-model="titleClass" placeholder="scegli dark o colored">
         <br>
         <br>
 
+        <p>Oppure scegli qui</p>
+        <select v-model="titleClass">
+            <option value="dark">Dark</option>
+            <option value="colored">Colored</option>
+        </select>
+        
         <p>Hello {{ name }} {{ lastName }}!</p>
         <br>
         <br>
